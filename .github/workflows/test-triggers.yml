@@ -6,8 +6,6 @@ name: CI
 # events but only for the master branch
 on:
   issues:
-    types:
-      - opened
   # push:
   #   branches: [ test-workflow ]
   # pull_request:
