@@ -10,7 +10,6 @@ jobs:
     - name: Make add labels query
       run: |
         curl \
-          -v \
           -u admin:${{ secrets.GITHUB_TOKEN }} \
           -H "Accept: application/vnd.github.antiope-preview+json" \
           -d '{"labels": ["this one is brand new"]}' \
