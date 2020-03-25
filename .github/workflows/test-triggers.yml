@@ -20,6 +20,7 @@ jobs:
     - name: Set assignee
       run: |
         curl \
+          -s \
           -X PATCH \
           -u admin:${{ secrets.GITHUB_TOKEN }} \
           -d '{"assignees": ["meatlink"]}' \
