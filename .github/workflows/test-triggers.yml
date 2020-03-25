@@ -1,21 +1,22 @@
-name: Label new issues
+name: Handle new issues
 
 on:
   issues:
+    - opened
 
 jobs:
   set-labels:
     runs-on: ubuntu-latest
     steps:
-    - name: Make add labels query
+    - name: Add label 'new'
       run: |
         curl \
           -s \
           -u admin:${{ secrets.GITHUB_TOKEN }} \
-          -H "Accept: application/vnd.github.antiope-preview+json" \
-          -d '{"labels": ["this one is brand new"]}' \
+          -d '{"labels": ["new"]}' \
           ${{ github.event.issue.url }}/labels
-    - name: tmp
+
+    - name: Set assignee
       run: |
         curl \
           -X PATCH \
