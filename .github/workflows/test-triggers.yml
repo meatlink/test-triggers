@@ -15,3 +15,11 @@ jobs:
           -H "Accept: application/vnd.github.antiope-preview+json" \
           -d '{"labels": ["this one is brand new"]}' \
           ${{ github.event.issue.url }}/labels
+    - name: tmp
+      run: |
+        curl \
+          -x PATCH \
+          -s \
+          -u admin:${{ secrets.GITHUB_TOKEN }} \
+          -d '{"assignees": ["meatlink"]}' \
+          ${{ github.event.issue.url }}
