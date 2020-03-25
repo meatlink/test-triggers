@@ -18,7 +18,7 @@ jobs:
     - name: tmp
       run: |
         curl \
-          -x PATCH \
+          -X PATCH \
           -u admin:${{ secrets.GITHUB_TOKEN }} \
           -d '{"assignees": ["meatlink"]}' \
           ${{ github.event.issue.url }}
