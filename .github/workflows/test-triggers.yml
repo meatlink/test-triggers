@@ -2,7 +2,8 @@ name: Handle new issues
 
 on:
   issues:
-    - opened
+    types:
+      - opened
 
 jobs:
   set-labels:
