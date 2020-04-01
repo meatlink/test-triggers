@@ -10,24 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Set issue defaults
-       uses: meatlink/issue-defaults@tmp
+       uses: meatlink/issue-defaults
        with:
          token: ${{ secrets.GITHUB_TOKEN }}
          label: new
          assignee: meatlink
-#    - name: Add label 'new'
-#      run: |
-#        curl \
-#          -s \
-#          -u admin:${{ secrets.GITHUB_TOKEN }} \
-#          -d '{"labels": ["new"]}' \
-#          ${{ github.event.issue.url }}/labels
-#
-#    - name: Set assignee
-#      run: |
-#        curl \
-#          -s \
-#          -X PATCH \
-#          -u admin:${{ secrets.GITHUB_TOKEN }} \
-#          -d '{"assignees": ["meatlink"]}' \
-#          ${{ github.event.issue.url }}
