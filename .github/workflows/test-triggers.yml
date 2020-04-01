@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Set issue defaults
-       uses: meatlink/issue-defaults
+       uses: meatlink/issue-defaults@v1
        with:
          token: ${{ secrets.GITHUB_TOKEN }}
          label: new
