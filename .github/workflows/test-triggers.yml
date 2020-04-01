@@ -12,7 +12,8 @@ jobs:
      - name: Set issue defaults
        uses: meatlink/issue-defaults@tmp
        with:
-         tag: new
+         token: ${{ secrets.GITHUB_TOKEN }}
+         label: new
          assignee: meatlink
 #    - name: Add label 'new'
 #      run: |
