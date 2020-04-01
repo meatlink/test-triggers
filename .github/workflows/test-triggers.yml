@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Set issue defaults
-       uses: https://github.com/meatlink/issue-defaults@tmp
+       uses: meatlink/issue-defaults@tmp
        with:
          tag: new
          assignee: meatlink
